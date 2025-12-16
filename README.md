@@ -1,4 +1,4 @@
-## SwiftQ
+# SwiftQ
 
 SwiftQ is a modern queue management and customer flow solution designed to help businesses reduce wait times, improve service efficiency, and deliver a smoother customer experience.
 
@@ -6,7 +6,7 @@ By replacing manual and disorganized queues with a smart, structured system, Swi
 
 SwiftQ is built with scalability and simplicity in mind, making it suitable for businesses of all sizes—from small service centers to enterprise environments.
 
-🔍 Key Features
+## 🔍 Key Features
 
 Smart Queue Management – Organize and prioritize customer queues efficiently.
 
@@ -20,7 +20,7 @@ Transparent Operations – Clear workflows that reduce operational inefficiencie
 
 Scalable Architecture – Designed to grow with your business needs.
 
-🎯 Use Cases
+## 🎯 Use Cases
 
 Banks and financial institutions
 
@@ -32,7 +32,7 @@ Retail and service centers
 
 Customer support hubs
 
-🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 Frontend: Modern web technologies (Tailwind CSS, JavaScript)
 
@@ -42,6 +42,6 @@ Design: Clean, responsive, and brand-aligned UI
 
 Deployment: Optimized for performance and reliability
 
-📌 Vision
+## 📌 Vision
 
 SwiftQ aims to transform how businesses handle customer flow by delivering a faster, more transparent, and more efficient queue management experience—one that benefits both service providers and customers alike.
