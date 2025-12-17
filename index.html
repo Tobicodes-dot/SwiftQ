@@ -6,6 +6,8 @@
     <title>SwiftQ</title>
     <link rel="stylesheet" href="./Public/assets/style/output.css">
     <link rel="stylesheet" href="./Public/assets/style/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body class="bg-gray-50 min-h-screen font-sans scroll-smooth">
     <nav class="w-full bg-white border-b border-gray-100">
@@ -86,10 +88,10 @@
                 <img src="./Public/assets/images/Queue-amico.png" alt="Professional" class="rounded-xl shadow-lg object-cover w-full h-full" />
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-24 flex justify-center flex-col items-center text-center px-6">
-            <div class="flex items-center gap-2 mb-6">
+        <div class="max-w-7xl mx-auto mt-30 flex justify-center flex-col items-center text-center px-6">
+            <div class="flex items-center gap-2 mb-8">
                 <div class="w-2 h-2 bg-[#0A1A3A] rounded-full"></div>
-                <h1 class="text-[#0A1A3A] font-semibold text-xl md:text-2xl">
+                <h1 class="text-[#0A1A3A] font-light text-xl md:text-xl">
                     Why choose SwiftQ?
                 </h1>
                 </div>
@@ -189,5 +191,109 @@
             </div>
         </div>
     </section>
+    <section id="services" class="mt-32 mb-16 flex flex-col items-center">
+        <div class="flex items-center gap-2 mb-6">
+                <div class="w-2 h-2 bg-[#0A1A3A] rounded-full"></div>
+                <h1 class="text-[#0A1A3A] font-light text-xl md:text-xl">
+                    Services
+                </h1>
+                </div>
+
+                <h1 class="text-[#0A1A3A] font-medium text-3xl md:text-5xl leading-tight text-center">
+                Reliable queue management built <br> for seamless customer flow
+                </h1>
+        </div>
+        <section class="carousel">
+            <div class="swiper swiftq-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <img src="./Public/assets/images/Queue-amico.png" alt="">
+                        <div class="overlay">
+                        <h3>Digital transformation</h3>
+                        <p>Leverage smart technology to modernize your operations.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./Public/assets/images/queue.jpg" alt="">
+                        <div class="overlay">
+                        <h3>Business consulting</h3>
+                        <p>Tailored strategies aligned with your service goals.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./Public/assets/images/Queue-amico.png" alt="">
+                        <div class="overlay">
+                        <h3>Operational efficiency</h3>
+                        <p>Optimize queues, reduce wait times, and boost productivity.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Public/assets/images/Queue-amico.png" alt="">
+                        <div class="overlay">
+                        <h3>Operational efficiency</h3>
+                        <p>Optimize queues, reduce wait times, and boost productivity.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Public/assets/images/Queue-amico.png" alt="">
+                        <div class="overlay">
+                        <h3>Operational efficiency</h3>
+                        <p>Optimize queues, reduce wait times, and boost productivity.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <section class="carousel" role="region" aria-label="Website Content Carousel">
+                    <div class="swiper swiftq-swiper">
+                        <div class="swiper-button-next" aria-label="Next slide"></div>
+                        <div class="swiper-button-prev" aria-label="Previous slide"></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+    <script>
+        new Swiper(".swiftq-swiper", {
+            // Core Functionality
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1, // Start with 1 on small screens (as per breakpoints)
+            spaceBetween: 30,
+
+            // Speed and Smoothness (New/Enhanced)
+            speed: 800, // Faster, professional transition speed (in milliseconds)
+            easing: 'ease-out', // Ensure smooth deceleration (often default, but good to know)
+            // Note: Remove 'loopedSlides: 3' - Swiper handles this internally for 'loop' and 'centeredSlides'.
+
+            // Navigation
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // Pagination (New: For better discoverability and visual cues)
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            
+            // Autoplay
+            autoplay: {
+                delay: 4000, // Slightly longer delay (4 seconds) for better readability
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true, // New: Excellent UX feature
+            },
+
+            // Responsive Breakpoints
+            breakpoints: {
+                0: { slidesPerView: 1, spaceBetween: 20 }, // Added spaceBetween for small screens
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+            },
+        });
+    </script>
 </body>
 </html>
