@@ -77,35 +77,21 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Update: Navigation buttons */
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: #0A1A3A; /* Dark blue background */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.swiper-pagination {
+  position: relative !important;
+  bottom: -5px !important;
+}
+
+/* Update: Pagination Dots */
+.swiper-pagination-bullet {
+  background-color: #0A1A3A; /* Dark blue color */
+  opacity: 0.7; /* Slightly transparent */
+  width: 12px;
+  height: 12px;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover */
 }
 
-/* Hover effect */
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: #1a3a7a; /* Slightly lighter blue on hover */
-  transform: scale(1.05); /* Subtle growth on hover */
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  color: white;
-  /* Swiper uses a default font-size, often around 10-12px. Let's set a clearer, visible size: */
-  font-size: 16px; /* Make the arrow icon much bigger and visible */
-  font-weight: bold; /* Make the arrow character stand out */
-}
-
-/* Optional: Positioning adjustment if needed. Swiper adds default positioning. */
-.swiper-button-next {
-    right: 30px; /* Example offset for better alignment */
-}
-.swiper-button-prev {
-    left: 30px; /* Example offset for better alignment */
+.swiper-pagination-bullet-active {
+  background-color: #1a3a7a; /* Slightly lighter blue for active */
+  transform: scale(1.2); /* Slightly larger for active */
 }
