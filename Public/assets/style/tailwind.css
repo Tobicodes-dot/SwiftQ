@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.main{
+  scrollbehavior: smooth;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -95,3 +99,4 @@
   background-color: #1a3a7a; /* Slightly lighter blue for active */
   transform: scale(1.2); /* Slightly larger for active */
 }
+
