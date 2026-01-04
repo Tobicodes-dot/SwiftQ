@@ -1,0 +1,1 @@
+<?php var_dump(is_writable('Public/uploads')); ?>
