@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftQ - Company Registration</title>
+    <link rel="stylesheet" href="../../Public/assets/style/output.css">
+    <link rel="stylesheet" href="../../Public/assets/style/tailwind.css">
+</head>
+<body>
+    <section class="min-h-screen flex items-center justify-center bg-white px-6">
+
+        <div class="w-full max-w-xl">
+
+            <!-- Header -->
+            <div class="mb-12 text-center">
+                <div class="flex justify-center items-center gap-2 mb-4">
+                    <div class="logo-container"></div>
+                    <span class="text-2xl font-medium text-[#0A1A3A]">SwiftQ</span>
+                </div>
+
+                <h1 class="text-3xl font-medium text-[#0A1A3A]">
+                    Login to your company workspace
+                </h1>
+            </div>
+
+            <!-- FORM -->
+            <form id="registerForm" class="relative overflow-hidden" method="post" action="../../Backend/auth/company/login.php" enctype="multipart/form-data">
+                <!-- STEP 1 -->
+                <div class="step active">
+                    <h2 class="text-xl font-medium text-[#0A1A3A] mb-6">
+                        Login Information
+                    </h2>
+
+                    <div class="space-y-4">
+                        <input type="email" placeholder="Company email" name="email"
+                            class="w-full px-4 py-3 border rounded-lg focus:border-[#0A1A3A] focus:outline-none" />
+
+                        <input type="password" placeholder="Password" name="password"
+                            class="w-full px-4 py-3 border rounded-lg focus:border-[#0A1A3A] focus:outline-none" />
+                    </div>
+
+                    <button type="submit" 
+                        class="mt-8 w-full py-3 rounded-full bg-[#0A1A3A] text-white font-medium">
+                        Login →
+                    </button>
+                </div>  
+            </form>
+
+            <p class="text-xs text-gray-500 text-center mt-8">
+            Secure setup • No credit card required
+            </p>
+
+            <p class="text-sm text-gray-600 text-center mt-6">
+            Don't have an account? <a href="company-registration.html" class="text-[#0A1A3A] font-semibold hover:underline">Register here</a>
+            </p>
+        </div>
+    </section>
+</body>
+</html>

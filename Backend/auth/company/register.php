@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../../config.php';
 
 ini_set('display_errors', 1);
@@ -17,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 $companyName   = trim($_POST['company_name'] ?? '');
 $industry      = trim($_POST['industry'] ?? '');
 $region        = trim($_POST['company_region'] ?? '');
-$adminName     = trim($_POST['admin_name'] ?? '');
 $email         = trim($_POST['email'] ?? '');
 $password      = $_POST['password'] ?? '';
 
@@ -27,7 +27,6 @@ if (
     empty($companyName) || 
     empty($industry) || 
     empty($region) ||
-    empty($adminName) || 
     empty($email) || 
     empty($password)
 ) {
@@ -87,8 +86,8 @@ try {
 
     $stmt = $pdo->prepare("
         INSERT INTO companies 
-        (company_name, industry, logo, company_region, admin_name, email, password, Joined_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
+        (company_name, industry, logo, company_region, email, password, Joined_at)
+        VALUES (?, ?, ?, ?, ?, ?, NOW())
     ");
 
     $stmt->execute([
@@ -96,7 +95,6 @@ try {
         $industry,
         $logoName,
         $region,
-        $adminName,
         $email,
         $hashedPassword
     ]);

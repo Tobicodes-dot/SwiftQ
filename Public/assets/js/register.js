@@ -102,8 +102,10 @@ function prevStep() {
   }
 }
 
-// FINAL FORM VALIDATION
-document.getElementById("registerForm").addEventListener("submit", function(e) {
+// FINAL FORM VALIDATION & SUBMISSION
+document.getElementById("registerForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
   const inputs = steps[currentStep].querySelectorAll("input, select");
   let allFilled = true;
 
@@ -133,8 +135,30 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
   });
 
   if (!allFilled) {
-    e.preventDefault();
     alert("Please fill all fields before submitting.");
+    return;
+  }
+
+  // Submit form via AJAX
+  try {
+    const formData = new FormData(this);
+    const response = await fetch('../../Backend/auth/company/register.php', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert(data.message);
+      // Redirect to dashboard
+      window.location.href = data.redirect;
+    } else {
+      alert(data.message || 'Registration failed');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred during registration. Please try again.');
   }
 });
 
