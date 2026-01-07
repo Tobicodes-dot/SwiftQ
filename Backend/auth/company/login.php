@@ -42,13 +42,7 @@ try {
     $_SESSION['company_name'] = $company['company_name'];
     $_SESSION['email'] = $email;
 
-    echo json_encode([
-        'success' => true,
-        'message' => 'Login successful',
-        'redirect' => '../../../Public/dashboard/'
-    ]);
-
-    header("Location: ../../../Public/dashboard/");
+    header("Location: /SwiftQ/Public/loader.html?to=/SwiftQ/Public/dashboard/company/company_dashboard.php");
     exit;
 
 } catch (PDOException $e) {
