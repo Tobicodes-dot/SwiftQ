@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Loading...</title>
-<link rel="stylesheet" href="./assets/style/output.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <link rel="stylesheet" href="./assets/style/output.css" />
+    <!-- Lottie Player -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.0/lottie.min.js"></script>
 </head>
 
-<body class="min-h-screen flex items-center justify-center bg-white">
+<body class="min-h-screen flex items-center justify-center bg-white overflow-hidden">
+
     <div class="text-center">
-        <div class="w-12 h-12 border-4 border-[#0A1A3A] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <p class="text-[#0A1A3A] font-medium" id="loadingText">
-            Preparing your page…
-        </p>
+        <!-- Lottie container -->
+        <div id="lottieLoader" class="w-12 h-12 mx-auto"></div>
     </div>
 
-<script src="./assets/js/loader.js"></script>
+
+<script>
+    // 1️⃣ Load the Lottie file you downloaded
+    const container = document.getElementById("lottieLoader");
+    lottie.loadAnimation({
+        container: container,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "/SwiftQ/Public/assets/lottie/swiftq_loading.json"
+    });
+    container.style.transform = "scale(0.4)";
+    container.style.transformOrigin = "center";
+
+    // 3️⃣ Redirect after 3 seconds
+    const params = new URLSearchParams(window.location.search);
+    const destination = params.get("to");
+
+    setTimeout(() => {
+        if (destination) {
+            window.location.href = destination;
+        } else {
+            window.location.href = "/SwiftQ/index.html";
+        }
+    }, 3000);
+</script>
+
 </body>
 </html>
