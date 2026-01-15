@@ -28,9 +28,7 @@ $company_name = $_SESSION['company_name'] ?? 'Company';
         <div class="hidden lg:w-64 lg:flex lg:flex-col lg:bg-[#0A1A3A] lg:text-white lg:shadow-lg sticky top-0 h-screen">
             <div class="p-6 border-b border-white/10">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-stream text-lg"></i>
-                    </div>
+                    <div class="logo-container"></div>
                     <span class="text-2xl font-bold">SwiftQ</span>
                 </div>
             </div>

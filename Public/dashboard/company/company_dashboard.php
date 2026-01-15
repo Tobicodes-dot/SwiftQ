@@ -24,51 +24,13 @@ $company_name = $_SESSION['company_name'] ?? 'Company';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50">
-    <!-- Top Navigation Bar -->
-    <!-- <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-8">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-[#0A1A3A] to-blue-700 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-stream text-white text-lg"></i>
-                        </div>
-                        <span class="text-xl font-semibold text-gray-900">SwiftQ</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button class="relative p-2 text-gray-600 hover:text-gray-900">
-                        <i class="fas fa-bell text-xl"></i>
-                        <span class="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full"></span>
-                    </button>
-                    <div class="relative group">
-                        <button class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                            <div class="w-8 h-8 bg-[#0A1A3A] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                                <?php echo strtoupper(substr($company_name, 0, 1)); ?>
-                            </div>
-                            <span class="text-sm font-medium text-gray-700 hidden sm:block"><?php echo htmlspecialchars($company_name); ?></span>
-                        </button>
-                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl hidden group-hover:block">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile Settings</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Company Settings</a>
-                            <hr class="my-2">
-                            <a href="#logout" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav> -->
 
     <div class="flex">
         <!-- Sidebar -->
         <div class="hidden lg:w-64 lg:flex lg:flex-col lg:bg-[#0A1A3A] lg:text-white lg:shadow-lg sticky top-0 h-screen">
-            <!-- Logo Section -->
             <div class="p-6 border-b border-white/10">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-stream text-lg"></i>
-                    </div>
+                    <div class="logo-container"></div>
                     <span class="text-2xl font-bold">SwiftQ</span>
                 </div>
             </div>

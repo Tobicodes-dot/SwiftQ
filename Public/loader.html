@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,31 +18,32 @@
     </div>
 
 
-<script>
-    // 1️⃣ Load the Lottie file you downloaded
-    const container = document.getElementById("lottieLoader");
-    lottie.loadAnimation({
-        container: container,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        path: "/SwiftQ/Public/assets/lottie/swiftq_loading.json"
-    });
-    container.style.transform = "scale(0.4)";
-    container.style.transformOrigin = "center";
+    <script>
+        // 1️⃣ Load the Lottie file you downloaded
+        const container = document.getElementById("lottieLoader");
+        lottie.loadAnimation({
+            container: container,
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: "./assets/lottie/swiftq_loading.json"
+        });
+        container.style.transform = "scale(0.4)";
+        container.style.transformOrigin = "center";
 
-    // 3️⃣ Redirect after 3 seconds
-    const params = new URLSearchParams(window.location.search);
-    const destination = params.get("to");
+        // 3️⃣ Redirect after 3 seconds
+        const params = new URLSearchParams(window.location.search);
+        const destination = params.get("to");
 
-    setTimeout(() => {
-        if (destination) {
-            window.location.href = destination;
-        } else {
-            window.location.href = "/SwiftQ/index.html";
-        }
-    }, 3000);
-</script>
+        setTimeout(() => {
+            if (destination) {
+                window.location.href = destination;
+            } else {
+                window.location.href = "index.html";
+            }
+        }, 3000);
+    </script>
 
 </body>
+
 </html>

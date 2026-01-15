@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .main{
-  scrollbehavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .logo {
